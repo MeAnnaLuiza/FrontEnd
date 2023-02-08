@@ -137,6 +137,12 @@ section #text span {
     font-size: 1em;
     color: #fff;
     text-align: justify;
+    text-indent: 2%;
+    line-height: 1.6;
+}
+
+.sec p:not(:last-child)  {
+    margin-bottom: 20px;
 }
 
 footer {
