@@ -97,7 +97,9 @@ body{
 }
 
 .card .content p{
-color: #fff;    
+    color: #fff;
+    text-align: justify;
+    padding-bottom: 25px;
 }
 
 .card .content a{
