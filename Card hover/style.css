@@ -1,0 +1,220 @@
+@import url("https://fonts.googleapis.com/css?family=Cardo:400i|Rubik:400,700&display=swap");
+
+:root {
+  --d: 700ms;
+  --e: cubic-bezier(0.19, 1, 0.22, 1);
+  --font-sans: "Rubik", sans-serif;
+  --font-serif: "Cardo", serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: grid;
+  place-items: center;
+}
+
+.page-content {
+  display: grid;
+  grid-gap: 1rem;
+  padding: 1rem;
+  max-width: 1024px;
+  margin: 0 auto;
+  font-family: var(--font-sans);
+}
+
+.card {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  padding: 1rem;
+  width: 100%;
+  text-align: center;
+  color: whitesmoke;
+  background-color: whitesmoke;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.1), 0 4px 4px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.1), 0 16px 16px rgba(0, 0, 0, 0.1);
+}
+
+.card:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 110%;
+  background-size: cover;
+  background-position: 0 0;
+  transition: transform calc(var(--d) * 1.5) var(--e);
+  pointer-events: none;
+}
+
+.card:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200%;
+  pointer-events: none;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.009) 11.7%, rgba(0, 0, 0, 0.034) 22.1%, rgba(0, 0, 0, 0.072) 31.2%, rgba(0, 0, 0, 0.123) 39.4%, rgba(0, 0, 0, 0.182) 46.6%, rgba(0, 0, 0, 0.249) 53.1%, rgba(0, 0, 0, 0.32) 58.9%, rgba(0, 0, 0, 0.394) 64.3%, rgba(0, 0, 0, 0.468) 69.3%, rgba(0, 0, 0, 0.54) 74.1%, rgba(0, 0, 0, 0.607) 78.8%, rgba(0, 0, 0, 0.668) 83.6%, rgba(0, 0, 0, 0.721) 88.7%, rgba(0, 0, 0, 0.762) 94.1%, rgba(0, 0, 0, 0.79) 100%);
+  transform: translateY(-50%);
+  transition: transform calc(var(--d) * 2) var(--e);
+}
+
+.card:nth-child(1):before {
+  background-image: url(https://img.freepik.com/free-photo/breathtaking-view-snowy-mountains-cloudy-sky-patagonia-chile_181624-9696.jpg?w=1380&t=st=1680391678~exp=1680392278~hmac=2b8715a9d3ba1dece1ed2810eb5c6ce30bc55b76639da2f6ecc27ae35af0e279);
+}
+
+.card:nth-child(2):before {
+  background-image: url(https://img.freepik.com/free-photo/beautiful-tropical-beach_74190-9987.jpg?w=1380&t=st=1680391706~exp=1680392306~hmac=581e2f20895781951de677a10b91d0d3a28b6d4c15366ca2e6933e07302d6304);
+}
+
+.card:nth-child(3):before {
+  background-image: url(https://img.freepik.com/free-photo/sand-dune-during-daytime_406225-14.jpg?w=1380&t=st=1680391743~exp=1680392343~hmac=46fc8ae5a91d542678ebfaeb25d8601336dadec51d1498b4c27b1d686fa03692);
+}
+
+.card:nth-child(4):before {
+  background-image: url(https://img.freepik.com/free-photo/breathtaking-shot-sea-dark-purple-sky-filled-with-stars_181624-23013.jpg?w=1380&t=st=1680391786~exp=1680392386~hmac=d818044685d8054e4751e3a6ff95e7a3a82e74cbb420e1a1f66a50752d8f7f5e);
+}
+
+.card:nth-child(5):before {
+  background-image: url(https://img.freepik.com/free-photo/vertical-shot-curvy-pathway-forest_181624-44037.jpg?w=740&t=st=1680391831~exp=1680392431~hmac=839180e4fb20dd35e933fa3e0fb47cac9145ec1eca3ad93cb534c601e472b157);
+}
+
+.card:nth-child(6):before {
+  background-image: url(https://img.freepik.com/free-photo/sunlight-coral_1360-32.jpg?w=740&t=st=1680392854~exp=1680393454~hmac=dfad1d89daa01ecc9c859a497b5d2fe4706e8e4bf74208a1acfcf79274b19ecf);
+}
+
+.card:nth-child(7):before {
+  background-image: url(https://img.freepik.com/free-photo/beautiful-scenery-landscape-flower-field_181624-42311.jpg?w=1480&t=st=1680392185~exp=1680392785~hmac=b4c3dd5b26cf8ca02ee1e53ebd55231fe1fbf6ebc342e24856f9ad5696e0d727);
+}
+
+.card:nth-child(8):before {
+  background-image: url(https://img.freepik.com/free-photo/natural-nature-green-cliff-europe_1232-4500.jpg?w=740&t=st=1680392564~exp=1680393164~hmac=65d540bf87575b0afc14c302df587de0a94accd33ae7540115a27bb7bce60c1a);
+}
+
+.content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
+  transition: transform var(--d) var(--e);
+  z-index: 1;
+}
+
+.content > * + * {
+  margin-top: 1rem;
+}
+
+.title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.copy {
+  font-family: var(--font-serif);
+  font-size: 1.125rem;
+  font-style: italic;
+  line-height: 1.35;
+}
+
+.btn {
+  cursor: pointer;
+  margin-top: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.65rem;
+  font-weight: bold;
+  letter-spacing: 0.025rem;
+  text-transform: uppercase;
+  color: white;
+  background-color: black;
+  border: none;
+}
+
+.btn:hover {
+  background-color: #0d0d0d;
+}
+
+.btn:focus {
+  outline: 1px dashed yellow;
+  outline-offset: 3px;
+}
+
+@media (min-width: 600px) {
+  .card {
+    height: 350px;
+  }
+}
+
+@media (min-width: 600px) {
+  .page-content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 800px) {
+  .page-content {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (hover: hover) and (min-width: 600px) {
+  .card:after {
+    transform: translateY(0);
+  }
+
+  .content {
+    transform: translateY(calc(100% - 4.5rem));
+  }
+
+  .content > *:not(.title) {
+    opacity: 0;
+    transform: translateY(1rem);
+    transition: transform var(--d) var(--e), opacity var(--d) var(--e);
+  }
+
+  .card:hover,
+  .card:focus-within {
+    align-items: center;
+  }
+
+  .card:hover:before,
+  .card:focus-within:before {
+      transform: translateY(-4%);
+    }
+
+  .card:hover:after,
+  .card:focus-within:after {
+    transform: translateY(-50%);
+  }
+
+  .card:hover .content,
+  .card:focus-within .content {
+    transform: translateY(0);
+  }
+
+  .card:hover .content > *:not(.title),
+  .card:focus-within .content > *:not(.title) {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: calc(var(--d) / 8);
+  }
+
+  .card:focus-within:before, .card:focus-within:after,
+  .card:focus-within .content,
+  .card:focus-within .content > *:not(.title) {
+    transition-duration: 0s;
+  }
+}
